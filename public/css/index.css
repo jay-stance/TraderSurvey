@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    /* overflow-y: hidden; */
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* landing page starts here  */
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 5rem;
+    background: linear-gradient(90deg, rgba(0, 35, 89, 1) 0%, #0846a4 49%);
+}
+
+.landing .image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    top: auto;
+    right: auto;
+    transform: translateY(20%);
+}
+
+.landing .image img {
+    width: 100%;
+}
+
+
+/* landing page navbar starts here  */
+
+.landing .nav {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.landing .nav .right {
+    border: 1px solid #e7e7e7;
+    padding: 7px 25px;
+}
+
+.landing .nav .left {
+    text-transform: uppercase;
+}
+
+
+/* landing page navbar ends here  */
+
+
+/* landing page main content starts here  */
+
+.landing .main {
+    width: 100%;
+    height: 80%;
+    padding-top: 3rem;
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.landing .main .left,
+.landing .main .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.landing .main .left h2 {
+    font-family: "poppins";
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 4rem;
+}
+
+.landing .main .left .survey {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.landing .main .left .survey p {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 40px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    transition: .3s all ease-in;
+}
+
+.landing .main .left .survey p:hover {
+    background: #ffffff;
+    color: #0846a4;
+    cursor: pointer;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 25px #d8d2d2;
+    }
+    50% {
+        box-shadow: 0 0 0px #d8d2d2;
+        /* color: blue; */
+    }
+}
+
+.landing .main .right {
+    align-items: flex-end;
+}
+
+.landing .main .right img {
+    z-index: 1000;
+    height: 500px;
+    width: 500px;
+    animation: jump 2s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .landing .main .right {
+        display: none;
+    }
+    .landing .main .left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .landing {
+        padding: 1rem;
+    }
+    .landing .nav {
+        height: 10vh;
+    }
+    .landing .main {
+        flex-direction: column;
+    }
+    .landing .main .right {
+        display: block;
+    }
+    .landing .main .left {
+        width: 100%;
+    }
+    .landing .main .left h2 {
+        font-size: 36px;
+        line-height: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .landing .main .left .survey {
+        margin-top: 2rem;
+    }
+    .landing .main .right img {
+        margin-left: 60%;
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .landing .main .right img {
+        margin-left: 60%;
+        height: 250px;
+        width: 250px;
+    }
+}
+
+.pulse-button {
+    color: #ff4450;
+    font-size: 1.3rem;
+    background: #fff;
+    padding: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s all ease-in;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(187, 211, 247, .4);
+    animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+    animation: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.9);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(187, 211, 247, .4);
+    }
+    100% {
+        transform: scale(.9);
+        box-shadow: 0 0 0 0 rgba(187, 211, 247, .4);
+    }
+}

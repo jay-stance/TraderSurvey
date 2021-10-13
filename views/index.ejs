@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <div class="landing">
+        <div class="nav">
+            <h2 class="left">Trader_</h2>
+            <h3 class="right"> About </h3>
+        </div>
+
+        <div class="image">
+            <img src="/assets/bg.svg" alt="">
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h2>Trader, the store in your campus</h2>
+                <p>Trader is the store in your campus.Please take this quick survey, help us make Trader better</p>
+                <div class="survey">
+                    <p>take Survey</p>
+                    <i class="fas fa-play pulse-button"></i>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="/assets/landing_image.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".landing .main .left .survey p").addEventListener("click", (e) => {
+            window.location.href = "/survey"
+        })
+    </script>
+</body>
+
+</html>
